@@ -1,0 +1,285 @@
+/* Stile generale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 5px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+/* Main content */
+main {
+    flex: 1;
+}
+
+.intro-panel {
+    background-color: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+ol, ul {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.instructions {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 4px solid #2c3e50;
+}
+
+/* Buttons */
+.primary-btn, .secondary-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-right: 10px;
+}
+
+.primary-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.primary-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+.secondary-btn {
+    background-color: #95a5a6;
+    color: white;
+}
+
+.secondary-btn:hover {
+    background-color: #7f8c8d;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+/* Room styles */
+.room-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    min-height: 80vh;
+}
+
+.room-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.room-title {
+    margin: 0;
+}
+
+.room-controls {
+    display: flex;
+    gap: 15px;
+}
+
+.timer-display, .hints-counter {
+    padding: 8px 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+.room-content {
+    margin-bottom: 30px;
+}
+
+.hint-display {
+    background-color: #fffacd;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    border-left: 4px solid #f1c40f;
+    display: none;
+}
+
+.success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    text-align: center;
+    display: none;
+}
+
+.room-footer {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.hint-btn {
+    background-color: #f1c40f;
+    color: #333;
+}
+
+.hint-btn:hover {
+    background-color: #f39c12;
+}
+
+/* Puzzle styles - base classes to be extended by each room */
+.puzzle-container {
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.puzzle-title {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.puzzle-description {
+    margin-bottom: 15px;
+}
+
+.puzzle-interactive {
+    min-height: 150px;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+.puzzle-feedback {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.puzzle-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.puzzle-error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Victory page */
+.victory-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.victory-title {
+    font-size: 3rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+.victory-message {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.trophy-icon {
+    font-size: 5rem;
+    color: #f1c40f;
+    margin-bottom: 30px;
+}
+
+.stats-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0 auto 30px;
+    max-width: 400px;
+}
+
+.stat-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.stat-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.restart-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.restart-btn:hover {
+    background-color: #27ae60;
+}

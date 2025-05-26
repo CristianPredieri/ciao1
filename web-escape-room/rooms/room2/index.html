@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanza X - Web Escape Room</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/room2.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Escape the Network</h1>
+            <p class="subtitle">Un'avventura nel mondo delle reti informatiche</p>
+        </header>
+        
+        <main>
+            <div class="room-container">
+                <div class="room-header">
+                    <h2 class="room-title">Stanza 2: [Nome Tema]</h2>
+                    <div class="room-controls">
+                        <div class="timer-display">Timer: <span id="timer">00:00</span></div>
+                        <div class="hints-counter">Indizi: <span id="hints-counter">0/3</span></div>
+                    </div>
+                </div>
+                
+                <div class="room-content">
+                    <p class="room-description">
+                        STANZA: [Descrizione della stanza e della sfida generale]
+                    </p>
+                    
+                    <!-- Puzzle 1 -->
+                    <div class="puzzle-container" id="puzzle1">
+                        <h3 class="puzzle-title">Enigma 1: [Nome Enigma]</h3>
+                        <p class="puzzle-description">
+                            [Descrizione dell'enigma e obiettivo]
+                        </p>
+                        <div class="puzzle-interactive">
+                            <!-- Contenuto interattivo dell'enigma qui -->
+                            <p>Implementare qui l'interazione dell'enigma 1</p>
+                        </div>
+                        <div class="puzzle-feedback" id="puzzle1-feedback"></div>
+                    </div>
+                    
+                    <!-- Puzzle 2 -->
+                    <div class="puzzle-container" id="puzzle2">
+                        <h3 class="puzzle-title">Enigma 2: [Nome Enigma]</h3>
+                        <p class="puzzle-description">
+                            [Descrizione dell'enigma e obiettivo]
+                        </p>
+                        <div class="puzzle-interactive">
+                            <!-- Contenuto interattivo dell'enigma qui -->
+                            <p>Implementare qui l'interazione dell'enigma 2</p>
+                        </div>
+                        <div class="puzzle-feedback" id="puzzle2-feedback"></div>
+                    </div>
+                    
+                    <!-- Puzzle 3 -->
+                    <div class="puzzle-container" id="puzzle3">
+                        <h3 class="puzzle-title">Enigma 3: [Nome Enigma]</h3>
+                        <p class="puzzle-description">
+                            [Descrizione dell'enigma e obiettivo]
+                        </p>
+                        <div class="puzzle-interactive">
+                            <!-- Contenuto interattivo dell'enigma qui -->
+                            <p>Implementare qui l'interazione dell'enigma 3</p>
+                        </div>
+                        <div class="puzzle-feedback" id="puzzle3-feedback"></div>
+                    </div>
+                    
+                    <div class="hint-display" id="hint-display"></div>
+                    <div class="success-message">
+                        <h3>Ottimo lavoro!</h3>
+                        <p>Hai completato tutti gli enigmi di questa stanza. Stai per essere trasferito alla prossima sfida...</p>
+                    </div>
+                </div>
+                
+                <div class="room-footer">
+                    <button id="hint-btn" class="primary-btn hint-btn">Richiedi Indizio</button>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Web Escape Room - Progetto di Sistemi e Reti</p>
+        </footer>
+    </div>
+    
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="js/room2.js"></script>
+</body>
+</html>

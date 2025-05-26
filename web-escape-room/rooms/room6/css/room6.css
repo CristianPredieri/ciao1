@@ -1,0 +1,534 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+/* Stili specifici per la stanza */
+
+/* Personalizzazione dei colori e del tema */
+.room-container {
+    border-left: 5px solid #3498db;
+    /* Cambia colore per diverse stanze */
+    min-height: auto;
+}
+
+.room-title {
+    color: #3498db;
+    /* Cambia colore per diverse stanze */
+}
+
+/* Stili per il drag and drop dell'enigma 2 */
+.drag-drop-container {
+    margin: 20px 0;
+}
+
+.drag-items,
+.drop-zones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+html {
+    z-index: 0;
+    overflow: hidden;
+}
+
+.drag-item {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: move;
+    user-select: none;
+}
+
+.drag-item.dragging {
+    opacity: 0.5;
+}
+
+.drop-zone {
+    width: 150px;
+    height: 50px;
+    border: 2px dashed #ced4da;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+
+
+
+
+#sub {
+    color: rgb(255, 0, 0);
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    font-family: 'Press Start 2P';
+
+}
+
+#consegna {
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+
+}
+
+#esercizio {
+    color: white;
+    text-align: left;
+
+}
+
+#richiesto {
+    color: red;
+    text-align: left;
+    font-family: 'Press Start 2P';
+    margin-top: 10px;
+
+}
+
+#prova3 {
+    margin-left: 20px;
+}
+
+#buttonGioco3 {
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    color: white;
+    font-family: 'Press Start 2P';
+    background-color: red;
+    margin-left: 150px;
+    margin-top: -15px;
+}
+
+#buttonGioco3:hover {
+    background-color: rgb(84, 0, 0);
+}
+
+#arrabbiato {
+    width: 150px;
+    position: relative;
+    top: 50px;
+    left:10px;
+}
+
+#felice {
+    width: 150px;
+    top: 50px;
+    position: relative;
+    right:10px;
+}
+#rete{
+    color: red;
+    margin-top: 4   0px;
+}
+#rete2{
+    color: red;
+}
+#titoletto{
+    color: white;
+}
+#consegna1{
+    color: white;
+
+}
+#controllaI{
+    margin-top: 20px;
+    background-color: red;
+    color:white;
+    width: 300px;
+    cursor: pointer;
+    height: 36px;
+}
+#controllaII{
+    margin-top: 20px;
+    background-color: red;
+    color:white;
+    width: 300px;
+    cursor: pointer;
+    height: 36px;
+}
+#controllaIII{
+    margin-top: 20px;
+    background-color: red;
+    color:white;
+    width: 300px;
+    cursor: pointer;
+    height: 36px;
+}
+#controllaIIII{
+    margin-top: 20px;
+    background-color: red;
+    color:white;
+    width: 300px;
+    cursor: pointer;
+    height: 36px;
+}
+#controllaI:hover{
+    background-color:rgb(116, 2, 2);
+}
+#controllaI::placeholder{
+    color: white;
+
+}
+#giocoo3{
+text-align: center;
+}
+#inputRisposta{
+    margin-top: 10px;
+}
+.titoletti{
+    color: white;
+}
+
+.drop-zone.highlight {
+    border-color: #3498db;
+    background-color: #e3f2fd;
+}
+
+.drop-zone.filled {
+    border-style: solid;
+    border-color: #28a745;
+    background-color: #d4edda;
+}
+
+/* Stili per il quiz dell'enigma 3 */
+.quiz-container {
+    margin: 15px 0;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.quiz-options label {
+    display: block;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.quiz-options label:hover {
+    background-color: #e9ecef;
+}
+
+.quiz-options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.quiz-options input[type="radio"]:checked+label {
+    background-color: #e3f2fd;
+    border-color: #3498db;
+}
+
+/* Stili per input di testo e bottoni */
+input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+
+
+/*css scritto da noi*/
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+
+#player {
+    position: absolute;
+    top: 800px;
+    opacity: 0
+}
+
+.gameInterface {
+    background-color: black;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    height: 842.344px;
+    position: fixed;
+    top: 80px;
+    z-index: 2;
+    border: 25px solid lightgrey;
+    border-radius: 20px;
+    left: 480px;
+
+}
+
+.gioco{
+    background-color: black;
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 251px;
+    z-index: 5;
+    border: 25px solid lightgrey;
+    border-radius: 20px;
+    left : 700px; 
+}
+
+#porta1 {
+    
+    visibility :hidden;
+    width: 80px;
+    background-color: rgb(255, 0, 0);
+    height: 100px;
+    position: absolute;
+    left: 170px;
+    top: 35px;
+}
+
+#porta2 {
+    visibility :hidden;
+    width: 80px;
+    background-color: rgb(34, 255, 0);
+    height: 100px;
+    position: absolute;
+    left: 410px;
+    top: 35px;
+}
+
+#porta3 {
+    visibility :hidden;
+    width: 80px;
+    background-color: rgb(38, 0, 255);
+    height: 100px;
+    position: absolute;
+    left: 630px;
+    top: 35px;
+}
+
+#fantasmino {
+    position: absolute;
+    left: -40px;
+    bottom: -50px;
+    z-index: 1;
+}
+
+#shadow {
+    position: absolute;
+    left: -100px;
+    bottom: -50px;
+    z-index: 0;
+}
+
+
+
+
+    
+
+
+#BENVENUTO {
+    position: absolute;
+    bottom: 230px;
+    left: 50px;
+    width: 360px;
+    background-color: rgb(202, 199, 199);
+    color: black;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    border: solid red 5px;
+    font-family: 'Press Start 2P';
+    font-size: 15px;
+    line-height: 1.6;
+    height: 300px;
+}
+.animate {
+    animation: moveGhost 3s linear infinite;
+}
+
+@keyframes moveGhost {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+
+
+
+#BENVENUTO::before {
+    content: "";
+    position: absolute;
+    bottom: -17px;
+    left: 23px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 17px solid red;
+
+}
+
+
+#OK,#OK2, #OK3, #OK4{
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 100px;
+    left: 120px;
+    bottom: 10px;
+}
+
+
+
+#OK:hover{
+    background-color: darkred;
+}
+#OK2:hover {
+    background-color: darkred;
+}
+
+#OK3:hover {
+    background-color: darkred;
+}
+
+#OK4:hover {
+    background-color: darkred;
+}
+
+
+#interface-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 1; 
+    display: none; 
+}
+
+#interface-overlay .show-on-overlay {
+    position: absolute;
+    z-index: 2;
+    visibility: visible;
+}
+
+#giocoo1{
+
+    margin-top: 0px;
+    width: 250px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 25px;
+
+}
+
+#but1{
+    margin-top: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    font-size: 17px;
+    border-radius: 5px;
+    width: 70px;
+    height: 40px;
+    position:relative; 
+    top:20px;
+    cursor: pointer;
+}
+
+#pokemon{
+    width: 270px;
+    height: 220px;
+}
+
+.bottoneBello{
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(135deg, #4ade80, #16a34a);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #15803d;
+    transition: all 0.2s ease;
+    position: relative;
+    top:220px;
+    position: absolute;
+    z-index:1000;
+  }
+
+.bottoneBello:hover {
+    background: linear-gradient(135deg, #22c55e, #15803d);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 #166534;
+  }
+
+
+  .bottoneAiuti{
+    width: 200px;
+    height: 50px;
+    background: linear-gradient(135deg, #de4a4a, #a31616);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 0 #801515;
+    transition: all 0.2s ease;
+    position: relative;
+    top:240px;
+    left:1000px;
+    position: absolute;
+    z-index:1000;
+    display: none;
+  }
+  .bottoneAiuti:hover {
+    background: linear-gradient(135deg, #c52222, #801515);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 0 #651616;
+  }
+  .no-hover:hover{
+    background: linear-gradient(135deg, #de4a4a, #a31616) !important;
+    transform: translateY(0) !important;
+    box-shadow: 0 6px 0 #801515 !important;
+
+  }

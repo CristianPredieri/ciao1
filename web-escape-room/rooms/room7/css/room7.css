@@ -1,0 +1,118 @@
+/* Stili specifici per la stanza */
+
+/* Personalizzazione dei colori e del tema */
+.room-container {
+    border-left: 5px solid #3498db; /* Cambia colore per diverse stanze */
+}
+
+.room-title {
+    color: #3498db; /* Cambia colore per diverse stanze */
+}
+
+/* Stili per il drag and drop dell'enigma 2 */
+.drag-drop-container {
+    margin: 20px 0;
+}
+
+.drag-items, .drop-zones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.drag-item {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: move;
+    user-select: none;
+}
+
+.drag-item.dragging {
+    opacity: 0.5;
+}
+
+.drop-zone {
+    width: 150px;
+    height: 50px;
+    border: 2px dashed #ced4da;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+.drop-zone.highlight {
+    border-color: #3498db;
+    background-color: #e3f2fd;
+}
+
+.drop-zone.filled {
+    border-style: solid;
+    border-color: #28a745;
+    background-color: #d4edda;
+}
+
+/* Stili per il quiz dell'enigma 3 */
+.quiz-container {
+    margin: 15px 0;
+}
+
+.quiz-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.quiz-options label {
+    display: block;
+    padding: 10px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.quiz-options label:hover {
+    background-color: #e9ecef;
+}
+
+.quiz-options input[type="radio"] {
+    margin-right: 10px;
+}
+
+.quiz-options input[type="radio"]:checked + label {
+    background-color: #e3f2fd;
+    border-color: #3498db;
+}
+
+/* Stili per input di testo e bottoni */
+input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    max-width: 300px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}

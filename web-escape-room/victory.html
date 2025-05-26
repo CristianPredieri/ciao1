@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vittoria! - Web Escape Room</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Escape the Network</h1>
+            <p class="subtitle">Un'avventura nel mondo delle reti informatiche</p>
+        </header>
+        
+        <main>
+            <div class="victory-container">
+                <h2 class="victory-title">Congratulazioni!</h2>
+                <div class="trophy-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <p class="victory-message">Hai completato con successo tutte le sfide e sei riuscito a fuggire dalla rete!</p>
+                
+                <div class="stats-container">
+                    <h3>Le tue statistiche</h3>
+                    <div class="stat-item">
+                        <span>Tempo totale:</span>
+                        <span id="total-time">00:00:00</span>
+                    </div>
+                </div>
+                
+                <button id="restart-btn" class="primary-btn restart-btn">Gioca di nuovo</button>
+                <button id="home-btn" class="secondary-btn">Torna alla home</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Web Escape Room - Progetto di Sistemi e Reti</p>
+        </footer>
+    </div>
+    
+    <script>
+        $(document).ready(function() {
+            // Carica e mostra il tempo totale
+            const completionTime = localStorage.getItem('escapeRoomCompletionTime') || 0;
+            const hours = Math.floor(completionTime / 3600);
+            const minutes = Math.floor((completionTime % 3600) / 60);
+            const seconds = completionTime % 60;
+            
+            const timeString = 
+                (hours > 0 ? (hours < 10 ? '0' : '') + hours + ':' : '') +
+                (minutes < 10 ? '0' : '') + minutes + ':' +
+                (seconds < 10 ? '0' : '') + seconds;
+            
+            $("#total-time").text(timeString);
+            
+            // Gestione bottoni
+            $("#restart-btn").click(function() {
+                localStorage.setItem('escapeRoomProgress', 1);
+                localStorage.setItem('escapeRoomStartTime', Date.now());
+                window.location.href = 'rooms/room1/index.html';
+            });
+            
+            $("#home-btn").click(function() {
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>

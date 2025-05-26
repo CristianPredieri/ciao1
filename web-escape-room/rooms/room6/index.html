@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stanza X - Web Escape Room</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="css/room6.css">
+</head>
+
+<body>
+    <button id="butHelp" class="bottoneAiuti">Aiutone</button>
+    <div id="overlay"></div>
+    <div class="container">
+        <header>
+            <h1>Escape the Network</h1>
+            <p class="subtitle">Un'avventura nel mondo delle reti informatiche</p>
+        </header>
+
+        <main>
+
+            <div class="room-container">
+                <div class="room-header">
+                    <h2 class="room-title">Stanza 6 : L'indirizzamento IP</h2>
+                    <div class="room-controls">
+                        <div class="timer-display">Timer: <span id="timer">00:00</span></div>
+                        <div class="hints-counter">Indizi: <span id="hints-counter">0/3</span></div>
+                    </div>
+                </div>
+
+                <div class="room-content">
+                    <p class="room-description">
+                        STANZA1: Entra nel nostro gioco stile 2d top-down per scoprire se hai appreso appieno le
+                        conoscenze sull'indirizzamento IP
+                    </p>
+                    <h3> Sei pronto a intraprendere questa sfida?</h3>
+                    <button type="" id="startGame">Clicca qui per iniziare</button>
+
+                    <div class="hint-display" id="hint-display"></div>
+                    <div class="success-message">
+                        <h3>Ottimo lavoro!</h3>
+                        <p>Hai completato tutti gli enigmi di questa stanza. Stai per essere trasferito alla prossima
+                            sfida...</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class='gameInterface' id="interface" style="visibility:hidden">
+
+                <div id="interface-overlay">
+
+                    <img id="shadow" src="img/fantasma/ombra.png" style="visibility: hidden" />
+                    <img id="fantasmino" class="show-on-overlay" src="img/fantasma/fantasmino.png" height="300px">
+
+                    <div id="BENVENUTO" class="show-on-overlay">
+                        <p id="testoBENVENUTO">Benvenuto nella stanza 6 puoi muoverti con WASD o le frecce<br>
+                            entra nelle tre stanze per risolvere gli enigmi e passare alla stanza successiva ^_^</p>
+                        <button id="OK">OK</button>
+                        <button id="OK2">OK</button>
+                        <button id="OK3">OK</button>
+                        <button id="OK4">OK</button>
+                    </div>
+                </div>
+            
+
+
+                <img id="room" src='img/rooms/startRoom.png' height='792.344px' widht="909.328px">
+                <img id="player" src="img/playerScript/playerUp.png" height="70px">
+
+
+                <div id="porta1"></div>
+                <div id="porta2"></div>
+                <div id="porta3"></div>
+            </div>
+
+                    
+                    <div id="game" class="gioco"></div>
+
+
+
+
+        </main>
+
+        <footer>
+            <p>Web Escape Room - Progetto di Sistemi e Reti</p>
+        </footer>
+    </div>
+
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="js/room6.js"></script>
+</body>
+
+</html>
