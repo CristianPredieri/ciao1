@@ -1,2 +1,0 @@
-ciao bello
-Come stai??
